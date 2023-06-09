@@ -1,0 +1,117 @@
+:root {
+
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+}
+
+@font-face {
+    font-family: Poppins ;
+    src: url('./assets/fonts/Poppins-Italic.ttf');
+}
+* {
+    font-family: Poppins !important;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Off-white);
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    background-color: var(--White);
+    width: 500px;
+    max-width: 80%;
+    padding: 30px;
+    position: relative;
+    border-radius: 15px;
+    border-bottom-right-radius: 160px;
+    margin-left: 400px;
+    margin-right: auto;
+}
+input {
+    width: 80px;
+    max-width: 80%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--Off-white);
+    outline: none;
+
+}
+input:focus {
+    border: 2px solid var(--Purple)
+}
+small {
+    color: red;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.submit-on{
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    background-color: var(--Purple);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+.submit-on:hover {
+    background-color: black;
+    transition: all 1s;
+}
+.output span {
+    font-size: 2.75rem;
+    color: var(--Purple);
+    font-style: italic;
+
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.input-flex {
+    display: flex;
+    border-bottom: 2px solid var(--Smokey-grey);
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    input {
+        width: 80%;
+    }
+    .output span {
+        font-size: 1.75rem;
+    }
+    .submit-on {
+        width: 40px;
+        height: 40px;
+        right: 40%;
+        top: 90px;
+    }
+    .submit-on img {
+        transform: scale(0.5);
+    }
+}
+.attribution {
+    margin-bottom: -1200px;
+    margin-right: 400px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+}
